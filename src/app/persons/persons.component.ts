@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
 import { SwapiService } from '../swapi.service';
+import { PERSONS } from '../images';
 @Component({
   selector: 'app-persons',
   templateUrl: './persons.component.html',
@@ -8,10 +9,12 @@ import { SwapiService } from '../swapi.service';
 })
 export class PersonsComponent implements OnInit {
   people: Person[]; 
+  persons = PERSONS;
   personSelected: Person;
   constructor(private api: SwapiService) { }
 
   ngOnInit() {
+
     this.people = [];
     this.getPeople();
   }
