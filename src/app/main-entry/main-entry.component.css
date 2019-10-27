@@ -16,7 +16,7 @@ body {
     top: 45%;
     left: 50%;
     z-index: 1;
-    animation: intro 6s ease-out 1s;
+    animation: intro s ease-out 1s;
     color: rgb(75, 213, 238);
     font-weight: 400;
     font-size: 300%;
@@ -47,7 +47,7 @@ body {
     left: 45%;
     z-index: 1;
     margin: auto;
-    animation: logo 9s ease-out 9s;
+    animation: logo 3s ease-out 3s;
     opacity: 0;
 }
 
@@ -106,7 +106,7 @@ p {
 
 /* Set the scrolling animation and position it */
 #content {
-  animation: scroll 100s linear 16s;
+  animation: scroll 60s linear 16s;
   position: absolute;
   top: 100%;
 }
