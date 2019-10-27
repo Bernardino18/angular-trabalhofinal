@@ -31,7 +31,6 @@ export class SwapiService {
     return this.http.get<Starship[]>(this.apiUrl + 'starships/?page='+page+this.ending);
   }
   getPersonById(id:number): Observable<Person> {   
-    console.log(this.apiUrl + 'people/'+id+ this.ending2);  
     return this.http.get<Person>(this.apiUrl + 'people/'+id+ this.ending2);
 
   }
@@ -40,5 +39,14 @@ export class SwapiService {
   }
   getVehiclesById(id:number): Observable<Vehicle> {     
     return this.http.get<Vehicle>(this.apiUrl + 'vehicles/'+id+ this.ending2);
+  }
+  getPeopleByName(name:string) : Observable<Person[]> {
+    return this.http.get<Person>(this.apiUrl + 'people/?search='+name+ this.ending2);
+  }
+  getStartShipsByName(name:string) : Observable<Starship[]> {
+    return this.http.get<Starship>(this.apiUrl + 'starships/?search='+name+ this.ending2);
+  }
+  getVehiclesByName(name:string) : Observable<Vehicle[]> {
+    return this.http.get<Starship>(this.apiUrl + 'vehicles/?search='+name+ this.ending2);
   }
 }
