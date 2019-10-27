@@ -1,0 +1,68 @@
+<head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-image: url("https://i.imgur.com/GoxS27D.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      min-height: 1000px;
+    }
+  </style>
+  <meta http-equiv="refresh" content="34;url=https://angular-trabalhofinal.stackblitz.io/persons" />
+</head>
+<body>
+  <section class="intro">
+  A long time ago, in a galaxy far,<br> far away....
+</section>
+
+<section class="logo">
+    <!-- SVG GOES HERE -->
+</section>
+<audio preload="auto" autoplay>
+  <source src="@/src/audio/Star_Wars_original_opening_crawl_1977.mp3" type="audio/mpeg">
+</audio>
+...
+
+<!-- Change the text to your liking -->
+<div id="board">  
+  <div id="content">
+    <p id="title">Episódio 1</p>
+    <p id="subtitle">A ameaça do tempo</p>
+    <br>
+    <p>O Problema era conseguir criar esta aplicação a tempo. Mas copiar código da net chegou como solução para muitos.</p> <br>
+    <p>As API surgiam pelos cantos mas nem todas eram de confiança e algumas atém nem os nomes correspondiam.</p>    
+    <p>Eis que de repente surge a SWAPI...</p>     
+    <!-- Add as many paragraphs as you want -->
+    <!-- And make it cheesy ! -->
+  </div>  
+</div>
+
+
+</body>
+<script>
+  // Sets the number of stars we wish to display
+const numStars = 100;
+
+// For every star we want to display
+for (let i = 0; i < numStars; i++) {
+  let star = document.createElement("div");  
+  star.className = "star";
+  var xy = getRandomPosition();
+  star.style.top = xy[0] + 'px';
+  star.style.left = xy[1] + 'px';
+  document.body.append(star);
+}
+
+// Gets random x, y values based on the size of the container
+function getRandomPosition() {  
+  var y = window.innerWidth;
+  var x = window.innerHeight;
+  var randomX = Math.floor(Math.random()*x);
+  var randomY = Math.floor(Math.random()*y);
+  return [randomX,randomY];
+}
+</script>

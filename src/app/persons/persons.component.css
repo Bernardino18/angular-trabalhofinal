@@ -1,0 +1,16 @@
+*{  
+  font-family: Arial, sans-serif;
+}
+h1{
+  padding-top: 30px;
+  color: yellow;
+  font-size: 50px;
+}
+h3{
+  color: lightgrey;
+  padding-top: 10px;
+  font-size: 25px; 
+}
+img{
+  padding-top: 20px;
+}
