@@ -14,7 +14,6 @@ export class PersonsComponent implements OnInit {
   constructor(private api: SwapiService) { }
 
   ngOnInit() {
-
     this.people = [];
     this.getPeople();
   }
